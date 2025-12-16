@@ -1,0 +1,160 @@
+* { 
+  box-sizing: border-box; 
+}
+
+html,body { 
+  height:100%; 
+}
+
+body{
+  margin:0;
+  color:var(--ink);
+  background:#f5d74c; /* bande jaune comme sur la photo */
+  font-family: "Trebuchet MS", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+ 
+.page{
+  max-width: 1120px;
+  margin: 0px auto;
+  padding: 18px 22px 26px;
+  box-shadow: var(--shadow);
+}
+ 
+.topbar{
+  padding: 6px 4px 14px;
+}
+ 
+.title{
+  margin: 0;
+  font-size: 4rem;
+  letter-spacing: .5px;
+  font-weight: 900;
+  font-family: "DynaPuff", system-ui;
+  text-align: left;
+}
+ 
+
+.panel{
+  display: grid;
+  gap: 18px;
+  align-items: start;
+}
+
+.top-row {
+  display: flex;
+  gap: 40px;               
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+ 
+
+.top-column {
+  flex: 1;           
+}
+ 
+.top-column.ingredients {
+  max-width: 45%;
+}
+ 
+.top-column.preparation {
+  max-width: 50%;
+}
+ 
+.panel.bottom{
+  grid-template-columns: 1fr 340px;
+  align-items: stretch;
+}
+ 
+
+ 
+/* Photo cards */
+.photo-card{
+  border: 2px solid #d6d6d6;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+}
+ 
+.photo-card img{
+  display:block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+ 
+.photo-card figcaption{
+  padding: 10px 12px;
+  font-weight: 800;
+  font-size: 18px;
+  font-style: italic;
+  color:#1f1f1f;
+  background-color: #1f1f1f38;
+}
+ 
+.photo-card.wide img{
+  height: 260px;
+}
+ .top-row .photo-card{
+  align-self: start;
+  transform: rotate(-0.02turn);
+}
+/* titres */
+h2, h3{
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: "DynaPuff", system-ui;
+}
+ 
+h4{
+  margin: 12px 0 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+ 
+/* Listes */
+.ingredients{
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 14px;
+  padding-left: 18px;
+  line-height: 1.28;
+  font-size: 15px;
+}
+ 
+.etapes{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.35;
+  font-size: 15px;
+}
+ 
+.etapes li{ margin-bottom: 10px; }
+.etapes strong{ font-weight: 900; }
+ 
+/* Ligne pointillee */
+.dot-divider{
+  margin: 14px 0 18px;
+  height: 10px;
+  background: radial-gradient(circle, #bdbdbd 2px, transparent 3px) left center / 14px 10px repeat-x;
+  opacity: .85;
+}
+ 
+/* Colonnes en bas */
+.cols{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding-right: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+ 
+
+ 
+
+.panel.bottom .photo-card{
+  align-self: start;
+  transform: rotate(0.02turn);
+}
